@@ -1,46 +1,47 @@
 <template>
-  <div
-    class="image-container"
-    @click="clicked()"
-    :style="{
-      backgroundImage: 'url(' + require('@/assets/' + imageName) + ')',
-    }"
-  >
-    <div class="hover-info">
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell">
-        <p>SAT: {{ getValue(1) }}</p>
+  <router-link :to="'/about/' + imageName">
+    <div
+      class="image-container"
+      :style="{
+        backgroundImage: 'url(' + require('@/assets/' + imageName) + ')',
+      }"
+    >
+      <div class="hover-info">
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell">
+          <p>SAT: {{ getValue(1) }}</p>
+        </div>
+        <div class="cell">
+          <p>LUM: {{ getValue(2) }}</p>
+        </div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell">
+          <p>CON: {{ getValue(0) }}</p>
+        </div>
+        <div class="cell">
+          <p>SYM: {{ getValue(5) }}</p>
+        </div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell">
+          <p>ENT: {{ getValue(4) }}</p>
+        </div>
+        <div class="cell">
+          <p>SHA: {{ getValue(3) }}</p>
+        </div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
+        <div class="cell empty-cell"></div>
       </div>
-      <div class="cell">
-        <p>LUM: {{ getValue(2) }}</p>
-      </div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell">
-        <p>CON: {{ getValue(0) }}</p>
-      </div>
-      <div class="cell">
-        <p>SYM: {{ getValue(5) }}</p>
-      </div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell">
-        <p>ENT: {{ getValue(4) }}</p>
-      </div>
-      <div class="cell">
-        <p>SHA: {{ getValue(3) }}</p>
-      </div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
-      <div class="cell empty-cell"></div>
     </div>
-  </div>
+  </router-link>
 </template>
 <script lang="ts">
 import { defineComponent, computed } from "vue";
