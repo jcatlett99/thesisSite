@@ -7,7 +7,7 @@
       }"
     ></div>
     <div class="information">
-      <div class="short-details">
+      <div class="short-details detail-container">
         <ul class="left-hand">
           <li>SATURATION: {{ getValue(1) }}</li>
           <li>LUMINANCE: {{ getValue(2) }}</li>
@@ -19,7 +19,7 @@
           <li>ENTROPY: {{ getValue(4) }}</li>
         </ul>
       </div>
-      <div class="long-details">
+      <div class="long-details detail-container">
         <ul>
           <li>DIAGONAL DOMINANCE:</li>
           <li>RULE OF THIRDS (LINES):</li>
@@ -35,10 +35,31 @@
           <li>{{ getValue(9) }}</li>
         </ul>
       </div>
-      <div class="colour-details">
-        <div class="cymk"></div>
-        <div class="rgba"></div>
-        <div class="hvs"></div>
+      <div class="colour-details detail-container">
+        <div class="cymk">
+          <ul>
+            <li>C:</li>
+            <li>Y:</li>
+            <li>M:</li>
+            <li>K:</li>
+          </ul>
+        </div>
+        <div class="rgba">
+          <ul>
+            <li>R:</li>
+            <li>G:</li>
+            <li>B:</li>
+            <li>A:</li>
+          </ul>
+        </div>
+        <div class="hvs">
+          <ul>
+            <li>H:</li>
+            <li>S:</li>
+            <li>L:</li>
+            <li>HEX:</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -101,7 +122,7 @@ console.log(imageId);
 
   width: 60%;
 }
-.short-details {
+.detail-container {
   border: 2px solid yellow;
   display: flex;
   align-items: center;
@@ -119,15 +140,10 @@ console.log(imageId);
 .right-hand {
   width: 50%;
 }
-.long-details {
-  border: 2px solid yellow;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 10%;
-}
 .long-details > ul > li {
+  list-style-type: none;
+}
+.colour-details > div > ul > li {
   list-style-type: none;
 }
 .image {
